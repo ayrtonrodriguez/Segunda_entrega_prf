@@ -1,3 +1,43 @@
+
+#grid{
+    display: flex;
+    grid-template-rows: 20vh 1rem 2rem;
+    grid-template-columns: auto auto auto;
+}
+
+h6{
+    font-family: fantasy;
+    font-size: larger;
+    color: #7e799c; 
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+h5{
+    font-family: fantasy;
+    text-decoration: none;
+    color: #928fa0;
+    font-size: 100px;
+    list-style: none;
+    margin-left: 10vh;
+    margin-right: 2rem;
+    margin-bottom: 170px;
+     position: relative;
+     right: 60vh;
+     top: 4vh;
+}
+.descripcion{
+    font-family: fantasy;
+    text-decoration: none;
+    color: #928fa0;
+    position: relative;
+     right: 55vh;
+     bottom: 10vh;
+     font-size: 28px;
+    margin-left: 37vh;
+     display: flex;
+     flex-direction: row;
+}
 a.header_li{
     margin: 2px;
     color: black;
@@ -10,6 +50,7 @@ a.header_li{
 }
 
 .header_links{
+    display: flex;
     font-family: fantasy;
     text-decoration: none;
     color: #3e2ca8;
@@ -17,26 +58,37 @@ a.header_li{
     list-style: none;
     margin-right: 2rem;
     transition: background 1s;
-    box-shadow: #3e2ca8;
+    justify-content: center;
 }
 .header_links:hover{
-    background-color: rgb(176, 153, 196);
+    background-color: rgb(138, 116, 158);
 }
+
+header{
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width,0);
+    right: 0;
+    z-index: 1020;
+}
+
 .busca{
     margin-left: 450px;
 }
 .imagen{
-    width: 100%;
-    height: 10%;
+    width: 40vh;
+    padding: 0px;
+    height: auto;
+    object-fit: cover;
     opacity: 35%;
 }
+
 header{
     background-color: #3e3d46;
 }
 body{
     background-color: #26252b;
     margin: 0;
-    margin-bottom: 40px;
 }
 .logo2{
     height: 60px;
@@ -54,6 +106,20 @@ h1{
     font-size: small;
 }
 
+h4{
+    font-family: fantasy;
+    font-size: small;
+    color: #7e799c; 
+    text-align: left; 
+    margin-top: 4px;
+}
+
+.option{
+    margin-top: 10px;
+}
+
+
+
 .image_prints{
     width: 480px;
     height: 400px;
@@ -65,15 +131,83 @@ h1{
     opacity: 70%;
 }
 
+.perfil{
+    transition: 1s;
+
+}
+.perfil:hover{
+    opacity: 75%;
+    height: 45px;
+    width: 45px;
 
 
+}
 
+.area_texto{
+    width: 70vh;
+}
+
+.columnas{
+  position: relative;
+  top: 100px;
+  right: 50px;
+  margin-left: 10vh;
+  display: flex;
+  justify-content: left;
+  border: #3e3d46 solid;
+  width: 50vh;
+  border-radius: 15px;
+  background-color: #201e25;
+}
+
+.columnas2{
+    position: relative;
+    top: 140px;
+    right: 50px;
+    margin-left: 9vh;
+    display: flex;
+    justify-content: left;
+  }
+
+.columnas3{
+    position: relative;
+    top: 160px;
+    right: 50px;
+    margin-left: 9vh;
+    display: flex;
+    justify-content: left;
+  }
+  .columnas4{
+    position: relative;
+    top: 190px;
+    right: 50px;
+    margin-left: 10vh;
+    display: flex;
+    justify-content: left;
+  }
+
+  .columnas5{
+    position: relative;
+    top: 210px;
+    right: 50px;
+    margin-left: 10vh;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: left;
+  }
+
+main{
+    height: 100vh;
+}
 
 .footer_{
     background-color: #3e3d46;
-    position: fixed;
+    margin-bottom: 0px;
     width: 100%;
+    position: static;
     bottom: 0;
+    z-index: 1020
 }
 .logo3{
     height: 28px;
@@ -81,4 +215,20 @@ h1{
     margin-bottom: 1rem;
    margin-left: 47%;
    
+}
+.perfil{
+position: absolute;
+right: 1rem;
+bottom: 0.5rem;  
+}
+
+
+.button_enviar{
+border: #0c0c11 solid;
+background-color: transparent;
+transition: 0.3s;
+}
+.button_enviar:hover{
+    background-color:#0c0c11;
+    color: #3e3d46;
 }
