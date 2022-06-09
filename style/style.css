@@ -5,6 +5,7 @@
     grid-template-columns: auto auto auto;
 }
 
+
 h6{
     font-family: fantasy;
     font-size: larger;
@@ -49,6 +50,7 @@ a.header_li{
     margin-left: 1rem;
 }
 
+
 .header_links{
     display: flex;
     font-family: fantasy;
@@ -59,6 +61,10 @@ a.header_li{
     margin-right: 2rem;
     transition: background 1s;
     justify-content: center;
+    animation-name: mult;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
 }
 .header_links:hover{
     background-color: rgb(138, 116, 158);
@@ -74,13 +80,6 @@ header{
 
 .busca{
     margin-left: 450px;
-}
-.imagen{
-    width: 40vh;
-    padding: 0px;
-    height: auto;
-    object-fit: cover;
-    opacity: 35%;
 }
 
 header{
@@ -205,7 +204,7 @@ main{
     background-color: #3e3d46;
     margin-bottom: 0px;
     width: 100%;
-    position: static;
+    position: absolute;
     bottom: 0;
     z-index: 1020
 }
@@ -226,9 +225,71 @@ bottom: 0.5rem;
 .button_enviar{
 border: #0c0c11 solid;
 background-color: transparent;
-transition: 0.3s;
+animation-name: oscurecer;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+
+@keyframes oscurecer{
+    0%{
+        color: aliceblue;
+        background-color: #000000;
+        opacity: 100%;
+    }
+    25%{
+        color: aliceblue;
+        background-color: #000000;
+        opacity: 75%;
+    }
+    50%{
+        color: aliceblue;
+        background-color: #000000;
+        opacity: 50%;
+    }
+    75%{
+        color: aliceblue;
+        background-color: #000000;
+        opacity: 75%;
+    }
+    100%{
+       color: aliceblue;
+        background-color: #000000;
+        opacity: 100%;
+    }
 }
 .button_enviar:hover{
-    background-color:#0c0c11;
-    color: #3e3d46;
+    animation: none;
+    color: aliceblue;
+        background-color: #000000;
+}
+@media screen and (max-width: 575px) {
+.columnas{
+    width: 45vh;
+}
+.culumn2{
+    display: flex;
+}
+
+}
+@media screen and (min-width: 992px){
+    .columnas{
+        width: 75vh;
+    }
+    h4{
+        font-size: medium;
+        display: inline;
+    
+    }
+    .option{
+        width: 5vh;
+    }
+    
+
+}
+@media screen and (max-width: 992px){
+.perfil{
+display: none;
+    }
 }
